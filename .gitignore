@@ -29,8 +29,8 @@ hs_err_pid*
 *.iws
 
 ### Maven ###
-target/
 !target/site/
+target/
 
 ### System ###
 .DS_Store
