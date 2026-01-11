@@ -45,7 +45,7 @@ public class LionTests {
     }
 
     @Test
-    public void getKittensTest() throws Exception {
+    public void getKittensAssertEqualsTestTrue() throws Exception {
         int expectedValue = 7;
 
         Mockito.when(felineMock.getKittens()).thenReturn(expectedValue);
@@ -53,14 +53,21 @@ public class LionTests {
         int actualValue = lion.getKittens();
 
         Assert.assertEquals(expectedValue, actualValue);
-        Mockito.verify(felineMock, Mockito.times(1)).getKittens();
+
         System.out.println("\nТестирование метода getKittens с установленным " +
                 "возвратом значения (7): \nФактическое значение: " + actualValue
                 + ". \nОжидаемое значение: " + expectedValue + ".");
     }
 
     @Test
-    public void getFoodTest() throws Exception{
+    public void getKittensVerifyTimesOneTest() throws Exception {
+        lion = new Lion(felineMock, "Самец");
+        lion.getKittens();
+        Mockito.verify(felineMock, Mockito.times(1)).getKittens();
+    }
+
+    @Test
+    public void getFoodAssertEqualsTestTrue() throws Exception{
         List<String> expectedValues = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(felineMock.getFood("Хищник")).thenReturn(expectedValues);
         lion = new Lion(felineMock, "Самец");

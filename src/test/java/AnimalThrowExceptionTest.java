@@ -3,8 +3,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
 public class AnimalThrowExceptionTest {
     private Animal animal;
 
@@ -14,7 +12,7 @@ public class AnimalThrowExceptionTest {
     }
 
     @Test
-    public void AnimalThrowExceptionTest() {
+    public void animalThrowExceptionTest() {
         String invalidInput = "Другое";
         String expectedText = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
 

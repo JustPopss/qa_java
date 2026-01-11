@@ -20,7 +20,7 @@ public class FelineTest {
     }
 
         @Test
-        public void getFamilyTest() {
+        public void getFamilyAssertEqualsTestTrue() {
             String expectedValue = "Кошачьи";
             String actualValue = feline.getFamily();
         System.out.println("\nТестирование метода getFamily:");
@@ -41,7 +41,7 @@ public class FelineTest {
         }
 
         @Test
-        public void eatMeatTest() throws Exception {
+        public void eatMeatAssertEqualsTestTrus() throws Exception {
             List<String> expectedValue = List.of("Животные", "Птицы", "Рыба");
             List<String> actualValues = feline.eatMeat();
             System.out.println("\nТестирование метода eatMeat");

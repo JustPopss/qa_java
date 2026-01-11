@@ -1,11 +1,8 @@
 import com.example.Animal;
-import com.example.Feline;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
-import org.mockito.Spy;
 
 import java.util.List;
 
@@ -31,7 +28,7 @@ public class AnimalParameterizedAnimalKindTest {
     }
 
     @Test
-    public void AnimalKindWithDifferentValuesTest() throws Exception {
+    public void animalKindWithDifferentValuesTest() throws Exception {
         List<String> actualValues = animal.getFood(animalKind);
         Assert.assertEquals(expectedValues, actualValues);
         System.out.println("\nТестирование метода getFood со значением " +
